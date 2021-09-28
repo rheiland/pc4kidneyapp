@@ -128,9 +128,9 @@
           </death>
 
           <volume>
-            <total>600</total>
+            <total>75.76</total>
             <fluid_fraction>0.75</fluid_fraction>
-            <nuclear>540</nuclear>
+            <nuclear>18.94</nuclear>
             <fluid_change_rate>0.05</fluid_change_rate>
             <cytoplasmic_biomass_change_rate>0.0045</cytoplasmic_biomass_change_rate>
             <nuclear_biomass_change_rate>0.0055</nuclear_biomass_change_rate>
@@ -228,9 +228,9 @@
           </death>
 
           <volume>
-            <total>600</total>
+            <total>75.76</total>
             <fluid_fraction>0.75</fluid_fraction>
-            <nuclear>540</nuclear>
+            <nuclear>18.94</nuclear>
             <fluid_change_rate>0.05</fluid_change_rate>
             <cytoplasmic_biomass_change_rate>0.0045</cytoplasmic_biomass_change_rate>
             <nuclear_biomass_change_rate>0.0055</nuclear_biomass_change_rate>
@@ -428,9 +428,9 @@
           </death>
 
           <volume>
-            <total>600</total>
+            <total>75.76</total>
             <fluid_fraction>0.75</fluid_fraction>
-            <nuclear>540</nuclear>
+            <nuclear>18.94</nuclear>
             <fluid_change_rate>0.05</fluid_change_rate>
             <cytoplasmic_biomass_change_rate>0.0045</cytoplasmic_biomass_change_rate>
             <nuclear_biomass_change_rate>0.0055</nuclear_biomass_change_rate>
@@ -628,9 +628,9 @@
           </death>
 
           <volume>
-            <total>600</total>
+            <total>75.76</total>
             <fluid_fraction>0.75</fluid_fraction>
-            <nuclear>540</nuclear>
+            <nuclear>18.94</nuclear>
             <fluid_change_rate>0.05</fluid_change_rate>
             <cytoplasmic_biomass_change_rate>0.0045</cytoplasmic_biomass_change_rate>
             <nuclear_biomass_change_rate>0.0055</nuclear_biomass_change_rate>
@@ -728,9 +728,9 @@
           </death>
 
           <volume>
-            <total>600</total>
+            <total>75.76</total>
             <fluid_fraction>0.75</fluid_fraction>
-            <nuclear>540</nuclear>
+            <nuclear>18.94</nuclear>
             <fluid_change_rate>0.05</fluid_change_rate>
             <cytoplasmic_biomass_change_rate>0.0045</cytoplasmic_biomass_change_rate>
             <nuclear_biomass_change_rate>0.0055</nuclear_biomass_change_rate>
@@ -828,9 +828,9 @@
           </death>
 
           <volume>
-            <total>600</total>
+            <total>75.76</total>
             <fluid_fraction>0.75</fluid_fraction>
-            <nuclear>540</nuclear>
+            <nuclear>18.94</nuclear>
             <fluid_change_rate>0.05</fluid_change_rate>
             <cytoplasmic_biomass_change_rate>0.0045</cytoplasmic_biomass_change_rate>
             <nuclear_biomass_change_rate>0.0055</nuclear_biomass_change_rate>
@@ -928,9 +928,9 @@
           </death>
 
           <volume>
-            <total>600</total>
+            <total>75.76</total>
             <fluid_fraction>0.75</fluid_fraction>
-            <nuclear>540</nuclear>
+            <nuclear>18.94</nuclear>
             <fluid_change_rate>0.05</fluid_change_rate>
             <cytoplasmic_biomass_change_rate>0.0045</cytoplasmic_biomass_change_rate>
             <nuclear_biomass_change_rate>0.0055</nuclear_biomass_change_rate>
@@ -1028,9 +1028,9 @@
           </death>
 
           <volume>
-            <total>600</total>
+            <total>75.76</total>
             <fluid_fraction>0.75</fluid_fraction>
-            <nuclear>540</nuclear>
+            <nuclear>18.94</nuclear>
             <fluid_change_rate>0.05</fluid_change_rate>
             <cytoplasmic_biomass_change_rate>0.0045</cytoplasmic_biomass_change_rate>
             <nuclear_biomass_change_rate>0.0055</nuclear_biomass_change_rate>
@@ -1128,9 +1128,9 @@
           </death>
 
           <volume>
-            <total>600</total>
+            <total>75.76</total>
             <fluid_fraction>0.75</fluid_fraction>
-            <nuclear>540</nuclear>
+            <nuclear>18.94</nuclear>
             <fluid_change_rate>0.05</fluid_change_rate>
             <cytoplasmic_biomass_change_rate>0.0045</cytoplasmic_biomass_change_rate>
             <nuclear_biomass_change_rate>0.0055</nuclear_biomass_change_rate>
@@ -1228,9 +1228,9 @@
           </death>
 
           <volume>
-            <total>600</total>
+            <total>75.76</total>
             <fluid_fraction>0.75</fluid_fraction>
-            <nuclear>540</nuclear>
+            <nuclear>18.94</nuclear>
             <fluid_change_rate>0.05</fluid_change_rate>
             <cytoplasmic_biomass_change_rate>0.0045</cytoplasmic_biomass_change_rate>
             <nuclear_biomass_change_rate>0.0055</nuclear_biomass_change_rate>
@@ -1328,9 +1328,9 @@
           </death>
 
           <volume>
-            <total>600</total>
+            <total>75.76</total>
             <fluid_fraction>0.75</fluid_fraction>
-            <nuclear>540</nuclear>
+            <nuclear>18.94</nuclear>
             <fluid_change_rate>0.05</fluid_change_rate>
             <cytoplasmic_biomass_change_rate>0.0045</cytoplasmic_biomass_change_rate>
             <nuclear_biomass_change_rate>0.0055</nuclear_biomass_change_rate>
@@ -1488,7 +1488,7 @@
 	
 	<initial_conditions>
 		<cell_positions enabled="true" type="csv">
-			<folder>../data</folder>
+			<folder>./config</folder>
 			<filename>cells_5um.csv</filename>
 		</cell_positions>
 	</initial_conditions>	
