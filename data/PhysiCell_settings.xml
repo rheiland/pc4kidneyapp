@@ -1488,7 +1488,7 @@
 	
 	<initial_conditions>
 		<cell_positions enabled="true" type="csv">
-			<folder>./data</folder>
+			<folder>../data</folder>
 			<filename>cells_5um.csv</filename>
 		</cell_positions>
 	</initial_conditions>	
