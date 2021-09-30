@@ -75,12 +75,12 @@ class SubstrateTab(object):
         # self.y_range = 2000.
 
         self.show_nucleus = False
-        self.show_edge = True
+        self.show_edge = False
 
         # Paul's additions in Nov 2020
         self.bgcolor = [1,1,1]
-        self.dark_mode = True; 
-        self.enable_alpha = True; 
+        self.dark_mode = False; 
+        self.enable_alpha = False; 
         self.default_alpha = 0.4
 
         # initial value
