@@ -282,6 +282,7 @@ void load_subcells_csv( std::string filename )
 	static int nCellID = cell_defaults.custom_data.find_variable_index( "cell_ID" ); 
 
 	std::string line;
+    int prev_type = -1;
 	while (std::getline(file, line))
 	{
 		std::vector<double> data;
@@ -300,8 +301,12 @@ void load_subcells_csv( std::string filename )
 		Cell_Definition* pCD = find_cell_definition( my_type );
 		if( pCD != NULL )
 		{
-			std::cout << "Creating " << pCD->name << " (type=" << pCD->type << ") at " 
-			<< position << std::endl; 
+            if (pCD->type != prev_type)
+            {
+                std::cout << "Creating " << pCD->name << " (type=" << pCD->type << ") at " 
+                    << position << std::endl; 
+                prev_type = pCD->type;
+            }
 			Cell* pCell = create_cell( *pCD ); 
 			pCell->assign_position( position ); 
 			
