@@ -35,26 +35,26 @@ class UserTab(object):
           step=1,
           style=style, layout=widget_layout)
 
-        param_name2 = Button(description='number_of_cells', disabled=True, layout=name_button_layout)
+        param_name2 = Button(description='mechanics_voxel_size', disabled=True, layout=name_button_layout)
         param_name2.style.button_color = 'tan'
 
-        self.number_of_cells = IntText(
-          value=0,
+        self.mechanics_voxel_size = FloatText(
+          value=15,
           step=1,
           style=style, layout=widget_layout)
 
         units_button1 = Button(description='', disabled=True, layout=units_button_layout) 
         units_button1.style.button_color = 'lightgreen'
-        units_button2 = Button(description='', disabled=True, layout=units_button_layout) 
+        units_button2 = Button(description='micron', disabled=True, layout=units_button_layout) 
         units_button2.style.button_color = 'tan'
 
         desc_button1 = Button(description='' , tooltip='', disabled=True, layout=desc_button_layout) 
         desc_button1.style.button_color = 'lightgreen'
-        desc_button2 = Button(description='initial number of cells (for each cell type)' , tooltip='initial number of cells (for each cell type)', disabled=True, layout=desc_button_layout) 
+        desc_button2 = Button(description='edge length of mechanics voxel. Set ~2 x agent radius x max relative interaction distance (default: 30)' , tooltip='edge length of mechanics voxel. Set ~2 x agent radius x max relative interaction distance (default: 30)', disabled=True, layout=desc_button_layout) 
         desc_button2.style.button_color = 'tan'
 
         row1 = [param_name1, self.random_seed, units_button1, desc_button1] 
-        row2 = [param_name2, self.number_of_cells, units_button2, desc_button2] 
+        row2 = [param_name2, self.mechanics_voxel_size, units_button2, desc_button2] 
 
         box_layout = Layout(display='flex', flex_flow='row', align_items='stretch', width='100%')
         box1 = Box(children=row1, layout=box_layout)
@@ -75,7 +75,7 @@ class UserTab(object):
 
         uep = xml_root.find('.//user_parameters')  # find unique entry point
         self.random_seed.value = int(uep.find('.//random_seed').text)
-        self.number_of_cells.value = int(uep.find('.//number_of_cells').text)
+        self.mechanics_voxel_size.value = float(uep.find('.//mechanics_voxel_size').text)
 
 
     # Read values from the GUI widgets to enable editing XML
@@ -88,4 +88,4 @@ class UserTab(object):
 
         uep = xml_root.find('.//user_parameters')  # find unique entry point
         uep.find('.//random_seed').text = str(self.random_seed.value)
-        uep.find('.//number_of_cells').text = str(self.number_of_cells.value)
+        uep.find('.//mechanics_voxel_size').text = str(self.mechanics_voxel_size.value)
