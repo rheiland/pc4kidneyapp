@@ -118,7 +118,8 @@ int main( int argc, char* argv[] )
 	/* PhysiCell setup */ 
  	
 	// set mechanics voxel size, and match the data structure to BioFVM
-	double mechanics_voxel_size = 30; 
+	// double mechanics_voxel_size = 30; 
+	double mechanics_voxel_size = parameters.doubles("mechanics_voxel_size");
 	Cell_Container* cell_container = create_cell_container_for_microenvironment( microenvironment, mechanics_voxel_size );
 	
 	/* Users typically start modifying here. START USERMODS */ 
@@ -214,9 +215,11 @@ int main( int argc, char* argv[] )
 
 			// update the microenvironment
 			microenvironment.simulate_diffusion_decay( diffusion_dt );
+            // std::cout << "time= " << PhysiCell_globals.current_time << std::endl;
 			
 			// run PhysiCell 
 			((Cell_Container *)microenvironment.agent_container)->update_all_cells( PhysiCell_globals.current_time );
+            // std::cout << "back from update_all_cells" << std::endl;
 			
 			/*
 			  Custom add-ons could potentially go here. 

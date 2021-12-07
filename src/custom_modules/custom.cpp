@@ -249,21 +249,21 @@ void setup_tissue( void )
 	
 	Cell* pC;
 	
-	for( int k=0; k < cell_definitions_by_index.size() ; k++ )
-	{
-		Cell_Definition* pCD = cell_definitions_by_index[k]; 
-		std::cout << "Placing cells of type " << pCD->name << " ... " << std::endl; 
-		for( int n = 0 ; n < parameters.ints("number_of_cells") ; n++ )
-		{
-			std::vector<double> position = {0,0,0}; 
-			position[0] = Xmin + UniformRandom()*Xrange; 
-			position[1] = Ymin + UniformRandom()*Yrange; 
-			position[2] = Zmin + UniformRandom()*Zrange; 
+	// for( int k=0; k < cell_definitions_by_index.size() ; k++ )
+	// {
+	// 	Cell_Definition* pCD = cell_definitions_by_index[k]; 
+	// 	std::cout << "Placing cells of type " << pCD->name << " ... " << std::endl; 
+	// 	for( int n = 0 ; n < parameters.ints("number_of_cells") ; n++ )
+	// 	{
+	// 		std::vector<double> position = {0,0,0}; 
+	// 		position[0] = Xmin + UniformRandom()*Xrange; 
+	// 		position[1] = Ymin + UniformRandom()*Yrange; 
+	// 		position[2] = Zmin + UniformRandom()*Zrange; 
 			
-			pC = create_cell( *pCD ); 
-			pC->assign_position( position );
-		}
-	}
+	// 		pC = create_cell( *pCD ); 
+	// 		pC->assign_position( position );
+	// 	}
+	// }
 	std::cout << std::endl; 
 	
 	// load cells from your CSV file (if enabled)

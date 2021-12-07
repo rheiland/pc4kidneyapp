@@ -1397,7 +1397,6 @@
   </initial_conditions>
   <user_parameters>
     <random_seed description="" type="int" units="dimensionless">0</random_seed>
-    <number_of_cells description="initial number of cells (for each cell type)" type="int" units="none">0</number_of_cells>
     <mechanics_voxel_size description="edge length of mechanics voxel. Set ~2 x agent radius x max relative interaction distance (default: 30)" type="double" units="micron">15</mechanics_voxel_size>
   </user_parameters>
 </PhysiCell_settings>
