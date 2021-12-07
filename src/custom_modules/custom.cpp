@@ -66,6 +66,10 @@
 */
 
 #include "./custom.h"
+#include <fstream>
+#include <iostream>
+#include <sstream>
+#include <string>
 
 void create_cell_types( void )
 {
@@ -127,16 +131,98 @@ void create_cell_types( void )
 
 void setup_microenvironment( void )
 {
-	// set domain parameters 
-	
-	// put any custom code to set non-homogeneous initial conditions or 
-	// extra Dirichlet nodes here. 
-	
-	// initialize BioFVM 
-	
-	initialize_microenvironment(); 	
-	
-	return; 
+    // set domain parameters 
+
+    // put any custom code to set non-homogeneous initial conditions or 
+    // extra Dirichlet nodes here. 
+
+    // initialize BioFVM 
+
+    initialize_microenvironment();
+
+    //---------------------------------
+    // read glom BM distances (signed)
+	int gbm_index = microenvironment.find_density_index( "glom_bm_distance" ); 
+    std::cout << "\n---------- gbm_index = " << gbm_index << std::endl;
+
+    // for( int n=0; n < microenvironment.number_of_voxels(); n++ )
+    std::ifstream gbm_file;
+    std::string line;
+    try {
+        gbm_file.open("../data/gbm_dist.dat");
+
+        double dval;
+        int n = 0;
+        float vmin = 1.e6;
+        float vmax = -1.e6;
+        float v;
+
+        while (std::getline(gbm_file,line))
+        {
+            // std::cout << "-- " << count1 << std::endl;
+            // count1++;
+            std::istringstream s(line);
+            std::string field;
+            // if (count1 > 5) break;
+            while (std::getline(s,field,','))
+            {
+                // std::cout << count2 << ": " << field << std::endl;
+                v = std::stof(field);
+                if (v < vmin) vmin = v;
+                if (v > vmax) vmax = v;
+                microenvironment(n)[gbm_index] = v;
+                n++;
+                // count2++;
+                // if (count2 > 5) break;
+            }
+        }
+        std::cout << "-------- vmin,vmax= " << vmin << ", "  << vmax << std::endl;
+    }
+    catch (const std::ifstream::failure& e) {
+      std::cout << "Exception opening/reading file";
+    }
+
+    //---------------------------------
+    // read glom capillary (4 vessels) distances (signed)
+	int gcap_index = microenvironment.find_density_index( "glom_cap_distance" ); 
+    std::cout << "\n---------- gcap_index = " << gcap_index << std::endl;
+
+    std::ifstream gcap_file;
+    try {
+        gcap_file.open("../data/vessels4_dist.dat");
+
+        double dval;
+        int n = 0;
+        float vmin = 1.e6;
+        float vmax = -1.e6;
+        float v;
+
+        while (std::getline(gcap_file,line))
+        {
+            // std::cout << "-- " << count1 << std::endl;
+            // count1++;
+            std::istringstream s(line);
+            std::string field;
+            // if (count1 > 5) break;
+            while (std::getline(s,field,','))
+            {
+                // std::cout << count2 << ": " << field << std::endl;
+                v = std::stof(field);
+                if (v < vmin) vmin = v;
+                if (v > vmax) vmax = v;
+                microenvironment(n)[gcap_index] = v;
+                n++;
+                // count2++;
+                // if (count2 > 5) break;
+            }
+        }
+        std::cout << "-------- vmin,vmax= " << vmin << ", "  << vmax << std::endl;
+    }
+    catch (const std::ifstream::failure& e) {
+      std::cout << "Exception opening/reading file";
+    }
+
+    return; 
 }
 
 void setup_tissue( void )
