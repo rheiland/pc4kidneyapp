@@ -1026,7 +1026,7 @@ class SubstrateTab(object):
             scipy.io.loadmat(full_fname, info_dict)
             M = info_dict['multiscale_microenvironment']
             #     global_field_index = int(mcds_field.value)
-            #     print('plot_substrate: field_index =',field_index)
+            # print('plot_substrate: self.field_index =',self.field_index)
             f = M[self.field_index, :]   # 4=tumor cells field, 5=blood vessel density, 6=growth substrate
             # plt.clf()
             # my_plot = plt.imshow(f.reshape(400,400), cmap='jet', extent=[0,20, 0,20])
@@ -1086,6 +1086,9 @@ class SubstrateTab(object):
                 try:
                     #substrate_plot = main_ax.contourf(xgrid, ygrid, M[self.field_index, :].reshape(self.numy, self.numx), levels=levels, extend='both', cmap=self.field_cmap.value, fontsize=self.fontsize)
                     substrate_plot = plt.contourf(xgrid, ygrid, M[self.field_index, :].reshape(self.numy, self.numx), levels=levels, extend='both', cmap=self.field_cmap.value, fontsize=self.fontsize)
+                    plt.contour()
+                    if self.field_index > 4:
+                        plt.contour(xgrid, ygrid, M[self.field_index, :].reshape(self.numy,self.numx), [0.0])
                 except:
                     contour_ok = False
                     # print('got error on contourf 1.')
@@ -1093,6 +1096,8 @@ class SubstrateTab(object):
                 try:
                     #substrate_plot = main_ax.contourf(xgrid, ygrid, M[self.field_index, :].reshape(self.numy,self.numx), num_contours, cmap=self.field_cmap.value)
                     substrate_plot = plt.contourf(xgrid, ygrid, M[self.field_index, :].reshape(self.numy,self.numx), num_contours, cmap=self.field_cmap.value)
+                    if self.field_index > 4:
+                        plt.contour(xgrid, ygrid, M[self.field_index, :].reshape(self.numy,self.numx), [0.0])
                 except:
                     contour_ok = False
                     # print('got error on contourf 2.')
