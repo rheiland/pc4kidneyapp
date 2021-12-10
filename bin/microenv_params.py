@@ -65,45 +65,45 @@ class MicroenvTab(object):
 
         self.oxygen_Dirichlet_boundary_condition_value_zmax = FloatText(value=10,style=style, layout=widget2_layout)
 
-        menv_var2 = Button(description='glom_cap_distance', disabled=True, layout=name_button_layout)
+        menv_var2 = Button(description='blood_vessel_distance', disabled=True, layout=name_button_layout)
         menv_var2.style.button_color = 'lightgreen'
 
         param_name5 = Button(description='diffusion_coefficient', disabled=True, layout=name_button_layout)
 
-        self.glom_cap_distance_diffusion_coefficient = FloatText(value=0.0,
+        self.blood_vessel_distance_diffusion_coefficient = FloatText(value=0.0,
           step=0.01,style=style, layout=widget_layout)
 
         param_name6 = Button(description='decay_rate', disabled=True, layout=name_button_layout)
 
-        self.glom_cap_distance_decay_rate = FloatText(value=0,
+        self.blood_vessel_distance_decay_rate = FloatText(value=0,
           step=0.01,style=style, layout=widget_layout)
         param_name7 = Button(description='initial_condition', disabled=True, layout=name_button_layout)
 
-        self.glom_cap_distance_initial_condition = FloatText(value=0,style=style, layout=widget_layout)
+        self.blood_vessel_distance_initial_condition = FloatText(value=0,style=style, layout=widget_layout)
         param_name8 = Button(description='Dirichlet_boundary_condition', disabled=True, layout=name_button_layout)
 
-        self.glom_cap_distance_Dirichlet_boundary_condition = FloatText(value=0,style=style, layout=widget_layout)
-        self.glom_cap_distance_Dirichlet_boundary_condition_toggle = Checkbox(description='on/off', disabled=False,style=style, layout=widget_layout)
+        self.blood_vessel_distance_Dirichlet_boundary_condition = FloatText(value=0,style=style, layout=widget_layout)
+        self.blood_vessel_distance_Dirichlet_boundary_condition_toggle = Checkbox(description='on/off', disabled=False,style=style, layout=widget_layout)
 
-        menv_var3 = Button(description='glom_bm_distance', disabled=True, layout=name_button_layout)
+        menv_var3 = Button(description='pbm_gbm_distance', disabled=True, layout=name_button_layout)
         menv_var3.style.button_color = 'tan'
 
         param_name9 = Button(description='diffusion_coefficient', disabled=True, layout=name_button_layout)
 
-        self.glom_bm_distance_diffusion_coefficient = FloatText(value=0.0,
+        self.pbm_gbm_distance_diffusion_coefficient = FloatText(value=0.0,
           step=0.01,style=style, layout=widget_layout)
 
         param_name10 = Button(description='decay_rate', disabled=True, layout=name_button_layout)
 
-        self.glom_bm_distance_decay_rate = FloatText(value=0,
+        self.pbm_gbm_distance_decay_rate = FloatText(value=0,
           step=0.01,style=style, layout=widget_layout)
         param_name11 = Button(description='initial_condition', disabled=True, layout=name_button_layout)
 
-        self.glom_bm_distance_initial_condition = FloatText(value=0,style=style, layout=widget_layout)
+        self.pbm_gbm_distance_initial_condition = FloatText(value=0,style=style, layout=widget_layout)
         param_name12 = Button(description='Dirichlet_boundary_condition', disabled=True, layout=name_button_layout)
 
-        self.glom_bm_distance_Dirichlet_boundary_condition = FloatText(value=0,style=style, layout=widget_layout)
-        self.glom_bm_distance_Dirichlet_boundary_condition_toggle = Checkbox(description='on/off', disabled=False,style=style, layout=widget_layout)
+        self.pbm_gbm_distance_Dirichlet_boundary_condition = FloatText(value=0,style=style, layout=widget_layout)
+        self.pbm_gbm_distance_Dirichlet_boundary_condition_toggle = Checkbox(description='on/off', disabled=False,style=style, layout=widget_layout)
         self.calculate_gradient = Checkbox(description='calculate_gradients', disabled=False, layout=desc_button_layout)
         self.track_internal = Checkbox(description='track_in_agents', disabled=False, layout=desc_button_layout)
 
@@ -136,16 +136,16 @@ class MicroenvTab(object):
         row8 = [self.oxygen_Dirichlet_boundary_condition_toggle_xmax, self.oxygen_Dirichlet_boundary_condition_value_xmax,]
         row9 = [self.oxygen_Dirichlet_boundary_condition_toggle_zmin, self.oxygen_Dirichlet_boundary_condition_value_zmin,]
         row10 = [self.oxygen_Dirichlet_boundary_condition_toggle_zmax, self.oxygen_Dirichlet_boundary_condition_value_zmax,]
-        row_glom_cap_distance = [menv_var2,  ] 
-        row11 = [param_name5, self.glom_cap_distance_diffusion_coefficient, menv_units_button5]
-        row12 = [param_name6, self.glom_cap_distance_decay_rate, menv_units_button6]
-        row13 = [param_name7, self.glom_cap_distance_initial_condition, menv_units_button7]
-        row14 = [param_name8, self.glom_cap_distance_Dirichlet_boundary_condition, menv_units_button8, self.glom_cap_distance_Dirichlet_boundary_condition_toggle]
-        row_glom_bm_distance = [menv_var3,  ] 
-        row15 = [param_name9, self.glom_bm_distance_diffusion_coefficient, menv_units_button9]
-        row16 = [param_name10, self.glom_bm_distance_decay_rate, menv_units_button10]
-        row17 = [param_name11, self.glom_bm_distance_initial_condition, menv_units_button11]
-        row18 = [param_name12, self.glom_bm_distance_Dirichlet_boundary_condition, menv_units_button12, self.glom_bm_distance_Dirichlet_boundary_condition_toggle]
+        row_blood_vessel_distance = [menv_var2,  ] 
+        row11 = [param_name5, self.blood_vessel_distance_diffusion_coefficient, menv_units_button5]
+        row12 = [param_name6, self.blood_vessel_distance_decay_rate, menv_units_button6]
+        row13 = [param_name7, self.blood_vessel_distance_initial_condition, menv_units_button7]
+        row14 = [param_name8, self.blood_vessel_distance_Dirichlet_boundary_condition, menv_units_button8, self.blood_vessel_distance_Dirichlet_boundary_condition_toggle]
+        row_pbm_gbm_distance = [menv_var3,  ] 
+        row15 = [param_name9, self.pbm_gbm_distance_diffusion_coefficient, menv_units_button9]
+        row16 = [param_name10, self.pbm_gbm_distance_decay_rate, menv_units_button10]
+        row17 = [param_name11, self.pbm_gbm_distance_initial_condition, menv_units_button11]
+        row18 = [param_name12, self.pbm_gbm_distance_Dirichlet_boundary_condition, menv_units_button12, self.pbm_gbm_distance_Dirichlet_boundary_condition_toggle]
         row19 = [self.calculate_gradient,]
         row20 = [self.track_internal,]
 
@@ -162,12 +162,12 @@ class MicroenvTab(object):
         box8 = Box(children=row8, layout=box_layout)
         box9 = Box(children=row9, layout=box_layout)
         box10 = Box(children=row10, layout=box_layout)
-        box_glom_cap_distance = Box(children=row_glom_cap_distance, layout=box_layout)
+        box_blood_vessel_distance = Box(children=row_blood_vessel_distance, layout=box_layout)
         box11 = Box(children=row11, layout=box_layout)
         box12 = Box(children=row12, layout=box_layout)
         box13 = Box(children=row13, layout=box_layout)
         box14 = Box(children=row14, layout=box_layout)
-        box_glom_bm_distance = Box(children=row_glom_bm_distance, layout=box_layout)
+        box_pbm_gbm_distance = Box(children=row_pbm_gbm_distance, layout=box_layout)
         box15 = Box(children=row15, layout=box_layout)
         box16 = Box(children=row16, layout=box_layout)
         box17 = Box(children=row17, layout=box_layout)
@@ -187,12 +187,12 @@ class MicroenvTab(object):
           box8,
           box9,
           box10,
-          box_glom_cap_distance,
+          box_blood_vessel_distance,
           box11,
           box12,
           box13,
           box14,
-          box_glom_bm_distance,
+          box_pbm_gbm_distance,
           box15,
           box16,
           box17,
@@ -250,23 +250,23 @@ class MicroenvTab(object):
           self.oxygen_Dirichlet_boundary_condition_toggle_zmax.value = False
         self.oxygen_Dirichlet_boundary_condition_value_zmax.value = float(vp[0].find('.//Dirichlet_options//boundary_value[6]').text)
 
-        self.glom_cap_distance_diffusion_coefficient.value = float(vp[1].find('.//diffusion_coefficient').text)
-        self.glom_cap_distance_decay_rate.value = float(vp[1].find('.//decay_rate').text)
-        self.glom_cap_distance_initial_condition.value = float(vp[1].find('.//initial_condition').text)
-        self.glom_cap_distance_Dirichlet_boundary_condition.value = float(vp[1].find('.//Dirichlet_boundary_condition').text)
+        self.blood_vessel_distance_diffusion_coefficient.value = float(vp[1].find('.//diffusion_coefficient').text)
+        self.blood_vessel_distance_decay_rate.value = float(vp[1].find('.//decay_rate').text)
+        self.blood_vessel_distance_initial_condition.value = float(vp[1].find('.//initial_condition').text)
+        self.blood_vessel_distance_Dirichlet_boundary_condition.value = float(vp[1].find('.//Dirichlet_boundary_condition').text)
         if vp[1].find('.//Dirichlet_boundary_condition').attrib['enabled'].lower() == 'true':
-          self.glom_cap_distance_Dirichlet_boundary_condition_toggle.value = True
+          self.blood_vessel_distance_Dirichlet_boundary_condition_toggle.value = True
         else:
-          self.glom_cap_distance_Dirichlet_boundary_condition_toggle.value = False
+          self.blood_vessel_distance_Dirichlet_boundary_condition_toggle.value = False
 
-        self.glom_bm_distance_diffusion_coefficient.value = float(vp[2].find('.//diffusion_coefficient').text)
-        self.glom_bm_distance_decay_rate.value = float(vp[2].find('.//decay_rate').text)
-        self.glom_bm_distance_initial_condition.value = float(vp[2].find('.//initial_condition').text)
-        self.glom_bm_distance_Dirichlet_boundary_condition.value = float(vp[2].find('.//Dirichlet_boundary_condition').text)
+        self.pbm_gbm_distance_diffusion_coefficient.value = float(vp[2].find('.//diffusion_coefficient').text)
+        self.pbm_gbm_distance_decay_rate.value = float(vp[2].find('.//decay_rate').text)
+        self.pbm_gbm_distance_initial_condition.value = float(vp[2].find('.//initial_condition').text)
+        self.pbm_gbm_distance_Dirichlet_boundary_condition.value = float(vp[2].find('.//Dirichlet_boundary_condition').text)
         if vp[2].find('.//Dirichlet_boundary_condition').attrib['enabled'].lower() == 'true':
-          self.glom_bm_distance_Dirichlet_boundary_condition_toggle.value = True
+          self.pbm_gbm_distance_Dirichlet_boundary_condition_toggle.value = True
         else:
-          self.glom_bm_distance_Dirichlet_boundary_condition_toggle.value = False
+          self.pbm_gbm_distance_Dirichlet_boundary_condition_toggle.value = False
 
         if uep.find('.//options//calculate_gradients').text.lower() == 'true':
           self.calculate_gradient.value = True
@@ -312,17 +312,17 @@ class MicroenvTab(object):
         vp[0].find('.//Dirichlet_options//boundary_value[6]').text = str(self.oxygen_Dirichlet_boundary_condition_value_zmax.value)
         vp[0].find('.//Dirichlet_options//boundary_value[6]').attrib['enabled'] = str(self.oxygen_Dirichlet_boundary_condition_toggle_zmax.value).lower()
 
-        vp[1].find('.//diffusion_coefficient').text = str(self.glom_cap_distance_diffusion_coefficient.value)
-        vp[1].find('.//decay_rate').text = str(self.glom_cap_distance_decay_rate.value)
-        vp[1].find('.//initial_condition').text = str(self.glom_cap_distance_initial_condition.value)
-        vp[1].find('.//Dirichlet_boundary_condition').text = str(self.glom_cap_distance_Dirichlet_boundary_condition.value)
-        vp[1].find('.//Dirichlet_boundary_condition').attrib['enabled'] = str(self.glom_cap_distance_Dirichlet_boundary_condition_toggle.value).lower()
+        vp[1].find('.//diffusion_coefficient').text = str(self.blood_vessel_distance_diffusion_coefficient.value)
+        vp[1].find('.//decay_rate').text = str(self.blood_vessel_distance_decay_rate.value)
+        vp[1].find('.//initial_condition').text = str(self.blood_vessel_distance_initial_condition.value)
+        vp[1].find('.//Dirichlet_boundary_condition').text = str(self.blood_vessel_distance_Dirichlet_boundary_condition.value)
+        vp[1].find('.//Dirichlet_boundary_condition').attrib['enabled'] = str(self.blood_vessel_distance_Dirichlet_boundary_condition_toggle.value).lower()
 
-        vp[2].find('.//diffusion_coefficient').text = str(self.glom_bm_distance_diffusion_coefficient.value)
-        vp[2].find('.//decay_rate').text = str(self.glom_bm_distance_decay_rate.value)
-        vp[2].find('.//initial_condition').text = str(self.glom_bm_distance_initial_condition.value)
-        vp[2].find('.//Dirichlet_boundary_condition').text = str(self.glom_bm_distance_Dirichlet_boundary_condition.value)
-        vp[2].find('.//Dirichlet_boundary_condition').attrib['enabled'] = str(self.glom_bm_distance_Dirichlet_boundary_condition_toggle.value).lower()
+        vp[2].find('.//diffusion_coefficient').text = str(self.pbm_gbm_distance_diffusion_coefficient.value)
+        vp[2].find('.//decay_rate').text = str(self.pbm_gbm_distance_decay_rate.value)
+        vp[2].find('.//initial_condition').text = str(self.pbm_gbm_distance_initial_condition.value)
+        vp[2].find('.//Dirichlet_boundary_condition').text = str(self.pbm_gbm_distance_Dirichlet_boundary_condition.value)
+        vp[2].find('.//Dirichlet_boundary_condition').attrib['enabled'] = str(self.pbm_gbm_distance_Dirichlet_boundary_condition_toggle.value).lower()
 
 
         uep.find('.//options//calculate_gradients').text = str(self.calculate_gradient.value)
